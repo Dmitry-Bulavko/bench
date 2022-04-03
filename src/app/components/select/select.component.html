@@ -1,0 +1,35 @@
+<div 
+    class="select"
+    [ngClass]="{
+        'select--open': isDropdownOpen
+    }"
+>
+    <div
+        class="select__content"
+        (click)="toggleDropdown()"
+    >
+        <bench-icon
+            [iconId]="icon"
+            class="select__icon--before"
+        ></bench-icon>
+        <div
+            class="select__content-text"
+        >{{optionsObject[value]}}</div>
+        <bench-icon
+            iconId="shevron"
+            class="select__icon--shevron"
+        ></bench-icon>
+    </div>
+    <div
+        *ngIf="isDropdownOpen"
+        class="select__dropdown"
+    >
+        <ul class="select__dropdown-list">
+            <li
+                *ngFor="let option of options"
+                class="select__dropdown-item"
+                (click)="setValue(option)"
+            >{{optionsObject[option]}}</li>
+        </ul>
+    </div>
+</div>

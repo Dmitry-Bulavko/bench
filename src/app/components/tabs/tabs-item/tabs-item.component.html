@@ -1,0 +1,22 @@
+<div 
+    *ngIf="!!data"
+    class="tab"
+>
+    <div 
+        *ngIf="!!data.iconBefore"
+        class="tab__icon tab__icon--before"
+    >icon</div>
+    <div 
+        *ngIf="data.type === tabType.link"
+        class="tab__content-wrapper"
+    >
+        <a
+            class="tab__content"
+            [routerLink]="[data?.href]"
+        >{{data?.value}}</a>
+    </div>
+    <div 
+        *ngIf="!!data.iconBefore"
+        class="tab__icon tab__icon--after"
+    >icon</div>
+</div>

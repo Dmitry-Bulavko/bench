@@ -1,0 +1,11 @@
+// @use 'sass:math';
+@import 'main';
+
+.button {
+    padding: $main_ui_grid $main_ui_grid*5;
+    border-radius: $main_ui_grid;
+    border: 2px solid orange;
+    color: orange;
+    background-color: transparent;
+    box-shadow: none;
+}

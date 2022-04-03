@@ -1,0 +1,11 @@
+$main_ui_grid: 8px;
+$main_ui_gap: $main_ui_grid * 4.5;
+$main_column_count: 12;
+$main_column_width: $main_ui_grid * 15;
+$main_width: $main_column_count * $main_column_width;
+
+$main_font: 'Mulish', sans-serif;
+
+
+$color_black: #000;
+$color_white: #fff;

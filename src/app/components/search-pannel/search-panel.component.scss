@@ -1,0 +1,40 @@
+@import 'main';
+
+.search-panel {
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/img/search_bg.jpg");
+    padding: $main_ui_grid * 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        color: $color-white;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        text-align: center;
+        margin: 0;
+    }
+    &__filter {
+        margin: 0 auto;
+        display: flex;
+        flex-grow: 0;
+        justify-content: center;
+        background-color: $color-white;
+        border-radius: $main_ui_grid;
+        padding: $main_ui_grid * 2;
+        
+        &-list {
+            border: 1px solid #D4E3EF;
+            border-radius: $main_ui_grid;
+            display: flex;
+            justify-content: center;
+        }
+        &-item {
+            &:last-child {
+                border-right: none;
+            }
+            border-right: 1px solid #D4E3EF;
+        }
+    }
+}

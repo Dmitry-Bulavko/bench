@@ -1,0 +1,17 @@
+<section 
+    class="search-panel"
+>
+    <h2 class="search-panel__title">Забэнчить столик на любой случай</h2>
+    <div class="search-panel__filter">
+        <div class="search-panel__filter-list">
+            <ng-container 
+                *ngFor="let select of filters"
+            >
+                <bench-select
+                    [data]="select"
+                    class="search-panel__filter-item"
+                ></bench-select>
+            </ng-container>
+        </div>
+    </div>
+</section>

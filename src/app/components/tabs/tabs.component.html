@@ -1,0 +1,11 @@
+<ul class="tabs">
+    <li
+        *ngFor="let tab of tabs"
+        class="tabs__item-wrapper"
+    >
+        <bench-tabs-item
+            class="tabs__item"
+            [data]="tab"
+        ></bench-tabs-item>
+    </li>
+</ul>

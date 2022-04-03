@@ -1,0 +1,19 @@
+<div class="header">
+    <bench-logo class="header__logo"></bench-logo>
+    <nav class="header__navigation">
+        <bench-tabs
+            class="header__navigation-content"
+            [tabs]="tabsObj"
+        ></bench-tabs>
+    </nav>
+    <div class="header__search">
+        <bench-icon [iconId]="'search'"></bench-icon>
+    </div>
+    <div
+        class="header__sign-in"
+    >Вход</div>
+    <bench-button
+        class="header__registration"
+    >Регистарция</bench-button>
+</div>
+<bench-search-panel></bench-search-panel>
