@@ -1,0 +1,11 @@
+<ng-container [ngSwitch]="layout">
+    <bench-layout-public *ngSwitchCase="LayoutType.Public">
+        <ng-content></ng-content>
+    </bench-layout-public>
+    <bench-layout-public *ngSwitchCase="LayoutType.Admin">
+        <ng-content></ng-content>
+    </bench-layout-public>
+    <bench-layout-clear *ngSwitchDefault>
+        <ng-content></ng-content>
+    </bench-layout-clear>
+</ng-container>

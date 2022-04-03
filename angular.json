@@ -186,5 +186,8 @@
       }
     }
   },
-  "defaultProject": "bench"
+  "defaultProject": "bench",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
