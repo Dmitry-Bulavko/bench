@@ -7,5 +7,5 @@ export interface ILayoutsState {
 }
 
 export const layoutsInitialState: ILayoutsState = {
-    actualLayout: ELayout.Clear
+    actualLayout: ELayout.Public
 } 

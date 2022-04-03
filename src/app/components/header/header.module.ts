@@ -7,8 +7,6 @@ import { TabsModule } from '../tabs/tabs.module';
 import { LogoModule } from '../logo/logo.module';
 import { SearchPanelModule } from '../search-pannel/search-panel.module';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent
@@ -19,7 +17,7 @@ import { SearchPanelModule } from '../search-pannel/search-panel.module';
     ButtonModule,
     TabsModule,
     LogoModule,
-    SearchPanelModule
+    SearchPanelModule,
   ],
   exports: [
     HeaderComponent

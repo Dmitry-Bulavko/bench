@@ -1,4 +1,5 @@
 import { createFeatureSelector, createSelector, MemoizedSelector } from "@ngrx/store";
+import { IAppState } from "src/app/models/store.model";
 import { ELayout } from "../models/layouts.enum";
 import { ILayoutsState, layoutsFeatureKey } from "./layouts-state";
 

@@ -1,11 +1,11 @@
-<ng-container [ngSwitch]="layout">
+<ng-container [ngSwitch]="$layout | async">
     <bench-layout-public *ngSwitchCase="LayoutType.Public">
-        <ng-content></ng-content>
+       <router-outlet></router-outlet>
     </bench-layout-public>
-    <bench-layout-public *ngSwitchCase="LayoutType.Admin">
-        <ng-content></ng-content>
-    </bench-layout-public>
+    <bench-layout-admin *ngSwitchCase="LayoutType.Admin">
+        <router-outlet></router-outlet>
+    </bench-layout-admin>
     <bench-layout-clear *ngSwitchDefault>
-        <ng-content></ng-content>
+        <router-outlet></router-outlet>
     </bench-layout-clear>
 </ng-container>

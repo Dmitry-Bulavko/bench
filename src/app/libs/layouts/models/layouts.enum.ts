@@ -1,5 +1,5 @@
 export enum ELayout{
-    Clear,
-    Public,
-    Admin
+    Clear = 'clear',
+    Public = 'public',
+    Admin = 'admin'
 }

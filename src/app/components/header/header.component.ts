@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ELayout } from 'src/app/libs/layouts/models/layouts.enum';
+import { LayoutsFacadeService } from 'src/app/libs/layouts/store/layouts-facade.service';
 import { ETabType, ITabs } from '../tabs/tabs.model';
 
 @Component({
@@ -6,7 +8,7 @@ import { ETabType, ITabs } from '../tabs/tabs.model';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   public tabsObj: ITabs = [
     {
@@ -22,13 +24,7 @@ export class HeaderComponent implements OnInit {
     {
       type: ETabType.link,
       value: 'Партнерам',
-      href: '/partners'
+      href: 'partners'
     },
-  ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-
+  ];
 }

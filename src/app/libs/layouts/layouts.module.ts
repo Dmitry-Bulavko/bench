@@ -5,6 +5,8 @@ import { PublicComponent } from './components/public/public.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { LayoutHandlerComponent } from './components/layout-handler/layout-handler.component';
 import { HeaderModule } from 'src/app/components/header/header.module';
+import { LayoutsStoreModule } from './store/layouts-store.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -17,7 +19,9 @@ import { HeaderModule } from 'src/app/components/header/header.module';
   ],
   imports: [
     CommonModule,
-    HeaderModule
+    HeaderModule,
+    LayoutsStoreModule,
+    AppRoutingModule
   ],
   exports: [
     LayoutHandlerComponent
