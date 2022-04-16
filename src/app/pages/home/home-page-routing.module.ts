@@ -5,8 +5,13 @@ import { HomeComponent } from "./home.component";
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+    },
+    {
+        path: 'place',
+        loadChildren: () => import('../place/place-page.module').then(m => m.PlacePageModule)
     }
+    
 ];
 
 @NgModule({

@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div class="home-page">
+    <div class="home-page__filter"></div>
+    <bench-cards-list
+        class="home-page__list"
+        [data]="cards$ | async"
+    ></bench-cards-list>
+</div>

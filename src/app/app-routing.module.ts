@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/news/news-page.module').then((m) => m.NewsPageModule)
   },
   {
+    path: 'partners',
+    loadChildren: () => import('./pages/partners/partners-page.module').then((m) => m.PartnersPageModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

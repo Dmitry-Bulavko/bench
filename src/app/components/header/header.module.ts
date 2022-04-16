@@ -6,6 +6,8 @@ import { ButtonModule } from '../button/button.module';
 import { TabsModule } from '../tabs/tabs.module';
 import { LogoModule } from '../logo/logo.module';
 import { SearchPanelModule } from '../search-pannel/search-panel.module';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { SearchPanelModule } from '../search-pannel/search-panel.module';
     TabsModule,
     LogoModule,
     SearchPanelModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent

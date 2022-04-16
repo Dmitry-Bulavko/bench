@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card__image-wrapper">
+        <img
+            class="card__image" 
+            [src]="image"
+        >
+    </div>
+    <div class="card__body">
+        <div class="card__title">
+            <h3 
+                class="card__title-text" 
+                [routerLink]="link"
+            >{{name}}</h3>
+            <span class="card__title-subtitle">{{placeType}}</span>
+        </div>
+        <div class="card__rating">
+            <div class="card__rating-review">{{rating}}</div>
+            <div class="card__rating-cost">{{costRating}}</div>
+        </div>
+        <div class="card__address">{{address}}</div>
+        <div class="card__kitchen-list">
+            <div *ngFor="let kitchen of kitchenList">{{kitchen}}</div>
+        </div>
+    </div>
+    <div class="card__footer">
+        <div class="card__avaliability"> 
+            <span class="card__avaliability-text">{{avaliableStatus}}</span>
+        </div>
+        <bench-button
+            class="card__button"
+            [type]="buttonType.Fill"
+        >Bench it!</bench-button>
+    </div>
+</div>
