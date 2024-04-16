@@ -18,6 +18,9 @@
     }
 
     &__icon {
+        width: 24px;
+        height: 24px;
+
         &--before {
             fill: #A0CBE6;
         }
@@ -43,6 +46,8 @@
     }
     &--open {
         & .select__icon {
+            width: 24px;
+            height: 24px;
             &--before {
                 fill: orange;
             }

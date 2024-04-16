@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/partners/partners-page.module').then((m) => m.PartnersPageModule)
   },
   {
+    path: 'constructor',
+    loadChildren: () => import('./pages/constructor/constructor.module').then((m) => m.ConstructorModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

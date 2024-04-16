@@ -5,6 +5,7 @@
     padding: $main_ui_grid $main_ui_grid*5;
     border-radius: $main_ui_grid;
     border: 2px solid orange;
+    cursor: pointer;
 
     box-shadow: none;
     &--fill {

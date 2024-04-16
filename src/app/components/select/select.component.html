@@ -9,15 +9,16 @@
         (click)="toggleDropdown()"
     >
         <bench-icon
+            *ngIf="icon"
             [iconId]="icon"
-            class="select__icon--before"
+            class="select__icon select__icon--before"
         ></bench-icon>
         <div
             class="select__content-text"
         >{{optionsObject[value]}}</div>
         <bench-icon
             iconId="shevron"
-            class="select__icon--shevron"
+            class="select__icon select__icon--shevron"
         ></bench-icon>
     </div>
     <div

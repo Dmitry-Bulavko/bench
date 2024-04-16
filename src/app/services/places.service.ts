@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ECostRating, IPlaceCard } from '../components/place-card/place-card.model';
+import { RestaurantService } from './google-api.service';
 
 const mocks: IPlaceCard[] = [{
   id: 'place1',
@@ -30,7 +31,9 @@ const mocks: IPlaceCard[] = [{
 })
 export class PlacesService {
 
-  constructor() { }
+  constructor(
+    private restaurantService: RestaurantService
+  ) { }
 
   getPlaceById(id: string): Observable<IPlaceCard> {
     return of(mocks.find(place => place.id === id))

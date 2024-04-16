@@ -1,8 +1,9 @@
 <p>Найдено заведений: {{cards?.length}}</p>
 <div class="cards">
-    <bench-place-card
+    <pre *ngFor="let card of cards">{{card.name}} </pre>
+    <!-- <bench-place-card
         *ngFor="let card of cards"
         class="cards__item"
         [data]="card"
-    ></bench-place-card>
+    ></bench-place-card> -->
 </div>

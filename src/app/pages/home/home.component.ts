@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { ECostRating, IPlaceCard } from 'src/app/components/place-card/place-card.model';
 import { ELayout } from 'src/app/libs/layouts/models/layouts.enum';
 import { LayoutsFacadeService } from 'src/app/libs/layouts/store/layouts-facade.service';
+import { RestaurantService } from 'src/app/services/google-api.service';
 import { PlacesService } from 'src/app/services/places.service';
 
 @Component({
@@ -13,15 +14,17 @@ import { PlacesService } from 'src/app/services/places.service';
 })
 export class HomeComponent implements OnInit {
 
-  public cards$: Observable<IPlaceCard[]> = this.placesService.getAllPlaces();
-
+  // public cards$: Observable<IPlaceCard[]> = this.placesService.getAllPlaces();
+  public cards$: Observable<any[]> = this.restaurantService.places;
   constructor(
     private layoutService: LayoutsFacadeService,
-    private placesService: PlacesService
+    private placesService: PlacesService,
+    private restaurantService: RestaurantService
   ) { }
 
   ngOnInit(): void {
     this.layoutService.setActualLayout(ELayout.Public);
+    this.restaurantService.getNearbyRestaurants();
   }
 
 }

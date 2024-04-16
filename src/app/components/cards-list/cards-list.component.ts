@@ -9,7 +9,7 @@ import { IPlaceCard } from '../place-card/place-card.model';
 export class CardsListComponent implements OnInit {
 
   @Input()
-  set data(cards: IPlaceCard[]) {
+  set data(cards: IPlaceCard[] | any[]) {
     this.cards = cards;
   };
 
