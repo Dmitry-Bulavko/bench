@@ -18,7 +18,7 @@ export class RestaurantService {
   public places: BehaviorSubject<any[]> = new BehaviorSubject([]);
 
 
-  private apiKey = 'AIzaSyALNAFU-IY7K3v0jiDUPpUD8RTF26_Yw3o';
+  private apiKey = '';
 
   constructor() { }
 
@@ -33,7 +33,7 @@ export class RestaurantService {
   getNearbyRestaurants(): void {
     // Load the Google Maps JavaScript API
     this.loadGoogleMaps();
-    
+
     setTimeout(() => {
         console.log('load')
         const service = new (window as any).google.maps.places.PlacesService(document.createElement('div'));
@@ -44,7 +44,7 @@ export class RestaurantService {
             this.places.next(restaurants);
           }
         });
-    }, 10000) 
-  
+    }, 10000)
+
   }
 }

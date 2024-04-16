@@ -14,8 +14,8 @@ import { PlacesService } from 'src/app/services/places.service';
 })
 export class HomeComponent implements OnInit {
 
-  // public cards$: Observable<IPlaceCard[]> = this.placesService.getAllPlaces();
-  public cards$: Observable<any[]> = this.restaurantService.places;
+  public cards$: Observable<IPlaceCard[]> = this.placesService.getAllPlaces();
+  // public cards$: Observable<any[]> = this.restaurantService.places;
   constructor(
     private layoutService: LayoutsFacadeService,
     private placesService: PlacesService,

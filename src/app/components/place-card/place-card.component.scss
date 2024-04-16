@@ -13,7 +13,7 @@
             flex-shrink: 0;
         }
     }
-    
+
     &__body {
         display: flex;
         flex-direction: column;
@@ -21,7 +21,7 @@
         padding: 20px;
         row-gap: 8px;
     }
-    
+
     &__footer {
         padding: 20px;
         display: flex;
@@ -30,8 +30,8 @@
         align-items: center;
         row-gap: 20px;
         flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 320px;
+        flex-shrink: 0;
+        width: 200px;
     }
 
     &__title {
