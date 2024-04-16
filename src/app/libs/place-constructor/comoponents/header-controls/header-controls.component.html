@@ -1,0 +1,25 @@
+<div class="controls">
+    <bench-icon
+        class="controls__item"
+        iconId="move"
+    ></bench-icon>
+    <bench-icon
+        class="controls__item controls__item--rotate-left"
+        iconId="redo"
+        (click)="rotateElement(15)"
+    ></bench-icon>
+    <bench-icon
+        class="controls__item controls__item--rotate-right"
+        iconId="redo"
+        (click)="rotateElement(-15)"
+    ></bench-icon>
+    <bench-icon
+        class="controls__item"
+        iconId="copy"
+    ></bench-icon>
+    <bench-icon
+        class="controls__item"
+        iconId="trash"
+        (click)="deleteElement()"
+    ></bench-icon>
+</div>

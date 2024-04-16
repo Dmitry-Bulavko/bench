@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+}
+.c-controll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+    // padding: 20px;
+    width: 100%;
+    gap: 20px;
+
+    &__icon {
+        display: flex;
+        // width: 50px;
+        // height: 50px;
+        svg {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    &__label {
+        text-transform: capitalize;
+    }
+}

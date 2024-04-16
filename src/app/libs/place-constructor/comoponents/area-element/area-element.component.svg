@@ -1,0 +1,9 @@
+<svg
+    [innerHTML]="element | safeHTML"
+    [ngClass]="{
+        active: isActiveElement    
+    }"
+>
+    Not found
+    
+</svg>

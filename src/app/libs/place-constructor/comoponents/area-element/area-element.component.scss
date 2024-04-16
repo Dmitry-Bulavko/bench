@@ -1,0 +1,9 @@
+.active {
+    outline: 4px solid lightblue;
+    cursor: move;
+}
+
+:host {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+}

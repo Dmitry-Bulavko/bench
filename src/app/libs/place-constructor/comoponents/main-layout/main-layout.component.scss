@@ -1,0 +1,66 @@
+.c-main-layout {
+    display: grid;
+    grid-template-columns: 320px calc(100vw - 320px);
+    grid-template-rows: 68px calc(100vh - 68px);
+    max-height: 100vh;
+    height: 100vh;
+
+    &__logo {
+        padding: 14px 20px;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        background-color: #fff;
+        & bench-icon {
+            transform: rotate(90deg);
+            width: 40px;
+            height: 40px;
+            fill: #B3B3B3;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 0 20px;
+    }
+
+    &__buttons {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__side-bar {
+        background-color: #fff;
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+
+
+    &__place {
+        padding: 20px;
+
+        &-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        &-area {
+            overflow: scroll;
+            width: 100%;
+            height: calc(100% - 20px);
+            &-container{
+                display: flex;
+                padding: 20px;
+            }
+        }
+    }
+
+    &__controlls {
+        width: 340px;
+        background-color: rgb(44, 40, 40);
+    }
+}

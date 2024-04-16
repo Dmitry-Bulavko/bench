@@ -1,0 +1,40 @@
+<section class="c-main-layout">
+    <div class="c-main-layout__logo">
+        <bench-icon iconId="shevron"></bench-icon>
+        <bench-logo></bench-logo>
+    </div>
+    <div class="c-main-layout__header">
+        <bench-select
+            [data]="{value: 'floor1', options: {floor1: 'Floor1'}}"
+        ></bench-select>
+        <div class="c-main-layout__toolts">
+            <bench-header-controls></bench-header-controls>
+        </div>
+        <div class="c-main-layout__buttons">
+            <bench-button [type]="ButtonTypes.Outline">Cancel</bench-button>
+            <bench-button>Save</bench-button>
+        </div>
+    </div>
+    <aside class="c-main-layout__side-bar">
+        <bench-controll-bar></bench-controll-bar>
+    </aside>
+    <div class="c-main-layout__place">
+        <div class="c-main-layout__place-controls"> 
+            <label>
+                Width:
+                <input [formControl]="layerWidth" type="number">
+            </label>
+            <label>
+                Height:
+                <input [formControl]="layerHeight"type="number">
+            </label>
+        </div>
+        <div class="c-main-layout__place-area">
+            <bench-place-area
+                class="c-main-layout__place-area-container"
+                [elements]="areaElements$ |async"
+            ></bench-place-area>
+        </div>
+    </div>
+
+</section>

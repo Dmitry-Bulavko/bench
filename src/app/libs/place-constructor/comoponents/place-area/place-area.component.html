@@ -1,0 +1,20 @@
+<section
+    class="place-area"
+>
+    <svg
+        [attr.width]="layerConfig.width"
+        [attr.height]="layerConfig.height"
+        [attr.viewBox]="layerConfig.viewBox"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <ng-container
+            *ngFor="let element of elements"
+        ><g 
+            bench-area-element 
+            [data]="element"
+        >
+            <text *cdkDragPreview>Pull me</text>
+        </g></ng-container>
+
+    </svg>
+</section>

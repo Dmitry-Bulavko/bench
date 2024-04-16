@@ -1,0 +1,19 @@
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.controls {
+    display: flex;
+    column-gap: 32px;
+    &__item {
+        width: 24px;
+        height: 24px;
+        &--rotate{
+            &-left {}
+            &-right {
+                transform: scaleX(-1);
+            }
+        }
+    }
+}

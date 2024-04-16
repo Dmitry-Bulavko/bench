@@ -1,0 +1,55 @@
+<section class="c-controll-bar">
+    <input 
+        type="search" 
+        style="
+            width: calc(100% - 40px);
+                height: 40px;
+                margin: 20px;
+                padding: 8px 40px 8px 20px;
+            "
+    >
+    <!-- <div class="c-controll-bar__list">
+        <ng-container
+            *ngFor="let control of controlls"
+        >
+            <bench-controll
+                class="c-controll-bar__item"
+                [ngClass]="{
+                    'c-controll-bar__item--active': (activeControl$ | async) === control.label
+                }" 
+                [data]="control"
+            ></bench-controll>
+        </ng-container>
+    </div> -->
+    <div class="c-controll-bar__list">
+        <ng-container
+            *ngFor="let controlGroup of controlGroups"
+        >
+            <ul class="c-controll-bar__group-list">
+                <div 
+                    class="c-controll-bar__group-title"
+                    (click)="toggleGroup($event)"
+                >
+                    <span class="c-controll-bar__group-title-text">{{controlGroup.label}}</span>
+                    <bench-icon
+                        class="c-controll-bar__group-title-shevron"
+                        iconId="shevron"
+                    ></bench-icon>
+                </div>
+                <li 
+                    *ngFor="let control of controlGroup.elements"
+                    class="c-controll-bar__group-item"
+                >
+                    <bench-controll
+                        class="c-controll-bar__item"
+                        [ngClass]="{
+                            'c-controll-bar__item--active': (activeControl$ | async) === control.label
+                        }" 
+                        [data]="control"
+                    ></bench-controll>
+                </li>
+            </ul>
+            
+        </ng-container>
+    </div>
+</section>
